@@ -3,7 +3,7 @@ FROM gradle:7-jdk11 as build
 RUN git clone https://github.com/GeyserMC/Geyser &&\
     cd Geyser &&\
     git submodule update --init --recursive &&\
-	gradlew build
+	gradle build
 
 FROM adoptopenjdk/openjdk11:alpine-jre
 
