@@ -2,7 +2,7 @@ FROM gradle:7-jdk17 as build
 
 RUN curl -L https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone > /Geyser.jar
 
-FROM adoptopenjdk/openjdk11:alpine-jre
+FROM adoptopenjdk/openjdk17:alpine-jre
 
 COPY --from=build /Geyser.jar /opt/Geyser/Geyser.jar
 
