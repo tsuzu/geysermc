@@ -6,7 +6,5 @@ FROM openjdk:17
 
 COPY --from=build /Geyser.jar /opt/Geyser/Geyser.jar
 
-USER geyser
 WORKDIR /var/lib/geyser
-EXPOSE 19132/udp
 CMD ["java", "-jar", "/opt/Geyser/Geyser.jar"]
