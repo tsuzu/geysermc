@@ -1,4 +1,4 @@
-FROM gradle:7-jdk11 as build
+FROM gradle:7-jdk17 as build
 
 RUN git clone https://github.com/GeyserMC/Geyser &&\
     cd Geyser &&\
