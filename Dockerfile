@@ -1,9 +1,9 @@
-FROM maven:3.6-jdk-11 as build
+FROM gradle:7-jdk11 as build
 
 RUN git clone https://github.com/GeyserMC/Geyser &&\
     cd Geyser &&\
     git submodule update --init --recursive &&\
-	mvn clean install
+	gradlew build
 
 FROM adoptopenjdk/openjdk11:alpine-jre
 
