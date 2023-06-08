@@ -1,6 +1,6 @@
 FROM gradle:7-jdk17 as build
 
-RUN curl -L https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone > /Geyser.jar
+RUN curl -L https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/build/libs/Geyser-Standalone.jar > /Geyser.jar
 
 FROM openjdk:17
 
